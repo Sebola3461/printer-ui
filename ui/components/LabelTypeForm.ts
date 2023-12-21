@@ -109,13 +109,15 @@ export function LabelTypeForm(
   });
 
   cancelButton.on("press", () => {
-    manager.goToHomeScreen();
     manager.clearSerialInputEntries();
+    manager.showQueueProcessingModal();
+    manager.closeLabelTypeModal();
   });
 
   smallLabelButton.on("press", () => {
-    manager.goToHomeScreen();
     manager.clearSerialInputEntries();
+    manager.showQueueProcessingModal();
+    manager.closeLabelTypeModal();
   });
 
   bigLabelButton.on("press", () => {

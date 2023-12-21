@@ -9,15 +9,11 @@ export function LoadingPrintQueue(
   const baseBox = blessed.box({
     top: "center",
     left: "center",
-    width: "25%",
+    width: "45%",
     height: "25%",
     content: "Processando etiquetas.",
-    tags: true,
-    mouse: true,
-    keys: true,
     hidden: true,
     focusable: true,
-    keyable: true,
     border: {
       type: "line",
     },
@@ -26,9 +22,9 @@ export function LoadingPrintQueue(
       left: 1,
     },
     style: {
-      fg: "yellow",
+      fg: "blue",
       border: {
-        fg: "yellow",
+        fg: "blue",
       },
     },
     name: "loadingQueueModal",

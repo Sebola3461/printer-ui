@@ -31,6 +31,14 @@ export class ScreenManager {
     selectLabelBox.focus();
   }
 
+  closeLabelTypeModal() {
+    const selectLabelBox = this.screen.children.find(
+      (c: any) => c.name == "requestLabelTypeForm"
+    ) as blessed.Widgets.BoxElement;
+
+    selectLabelBox.hide();
+  }
+
   goToHomeScreen() {
     const baseBox = this.screen.children.find(
       (c: any) => c.name == "baseForm"
@@ -68,6 +76,12 @@ export class ScreenManager {
   }
 
   showQueueProcessingModal() {
+    const baseBox = this.screen.children.find(
+      (c: any) => c.name == "baseForm"
+    ) as blessed.Widgets.BoxElement;
+
+    baseBox.hide();
+
     const loadingQueueModal = this.screen.children.find(
       (c: any) => c.name == "loadingQueueModal"
     ) as blessed.Widgets.BoxElement;
